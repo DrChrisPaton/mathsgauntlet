@@ -14,14 +14,8 @@
         p { margin-bottom: 14px; }
         a { color: #4A9EFF; }
         .back { display: inline-block; margin-bottom: 24px; color: #4A9EFF; text-decoration: none; font-size: 0.9rem; }
-        form { margin-top: 20px; }
-        label { display: block; color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 6px; margin-top: 16px; }
-        input, textarea { width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #fff; font-family: inherit; font-size: 1rem; }
-        input:focus, textarea:focus { outline: none; border-color: #4A9EFF; }
-        textarea { min-height: 120px; resize: vertical; }
-        button { margin-top: 20px; padding: 14px 32px; background: linear-gradient(135deg, #4A9EFF, #6C63FF); color: #fff; border: none; border-radius: 12px; font-size: 1rem; font-weight: 600; cursor: pointer; width: 100%; }
-        button:hover { opacity: 0.9; }
-        .success { display: none; padding: 16px; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.3); border-radius: 10px; color: #4ADE80; text-align: center; margin-top: 20px; }
+        .contact-btn { display: inline-block; margin-top: 8px; padding: 14px 32px; background: linear-gradient(135deg, #4A9EFF, #6C63FF); color: #fff; border: none; border-radius: 12px; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; }
+        .contact-btn:hover { opacity: 0.9; }
     </style>
 </head>
 <body>
@@ -45,34 +39,15 @@
         <p>Core covers the essential topics. Extended includes additional advanced content. You can switch between them in your Profile settings.</p>
 
         <h2>Contact Us</h2>
-        <p>Have a question, found a bug, or want to suggest a feature? Send us a message below.</p>
-
-        <form id="contactForm" action="https://formspree.io/f/xgegbnwk" method="POST">
-            <label for="email">Your email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Describe your question or issue..." required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-
-        <div class="success" id="successMsg">Thanks! We'll get back to you soon.</div>
+        <p>Have a question, found a bug, or want to suggest a feature?</p>
+        <a class="contact-btn" id="contactBtn" href="#">Send us an email</a>
     </div>
 
     <script>
-        const form = document.getElementById('contactForm');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const data = new FormData(form);
-            try {
-                await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-                form.style.display = 'none';
-                document.getElementById('successMsg').style.display = 'block';
-            } catch (err) {
-                alert('Something went wrong. Please try again.');
-            }
-        });
+        // Obfuscated email — bots can't scrape it from the HTML source
+        var u = 'cpaton'; var d = 'gmail.com';
+        var btn = document.getElementById('contactBtn');
+        btn.href = 'mai' + 'lto:' + u + '@' + d + '?subject=Maths%20Gauntlet%20Support';
     </script>
 </body>
 </html>

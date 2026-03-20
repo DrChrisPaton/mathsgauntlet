@@ -6,51 +6,67 @@
     <title>Maths Gauntlet</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0A0A1A; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; }
-        .container { max-width: 600px; text-align: center; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0A0A1A; color: #fff; min-height: 100vh; }
+        .hero { text-align: center; padding: 60px 20px 40px; }
         .icon { font-size: 80px; margin-bottom: 20px; }
         h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; background: linear-gradient(135deg, #4A9EFF, #9B59F6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .subtitle { font-size: 1.2rem; color: rgba(255,255,255,0.6); margin-bottom: 40px; }
-        .features { text-align: left; margin-bottom: 40px; }
+        .subtitle { font-size: 1.2rem; color: rgba(255,255,255,0.6); margin-bottom: 32px; }
+        .app-store-badge { height: 54px; border-radius: 12px; }
+        .app-store-link { display: inline-block; margin-top: 8px; }
+        .coming-soon { display: inline-block; margin-top: 8px; padding: 14px 32px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; color: rgba(255,255,255,0.5); font-size: 1rem; font-weight: 600; }
+
+        .screenshots { overflow-x: auto; white-space: nowrap; padding: 0 20px 40px; -webkit-overflow-scrolling: touch; }
+        .screenshots img { height: 480px; border-radius: 20px; margin-right: 16px; border: 1px solid rgba(255,255,255,0.1); vertical-align: top; }
+
+        .features { max-width: 600px; margin: 0 auto; padding: 20px 20px 40px; }
         .feature { display: flex; align-items: flex-start; gap: 16px; padding: 16px; margin-bottom: 12px; background: rgba(255,255,255,0.05); border-radius: 14px; border: 1px solid rgba(255,255,255,0.08); }
         .feature-icon { font-size: 24px; min-width: 32px; text-align: center; }
-        .feature p { color: rgba(255,255,255,0.8); line-height: 1.5; }
-        .badge { display: inline-block; margin-top: 20px; }
-        .badge img { height: 54px; }
-        .links { margin-top: 40px; display: flex; gap: 24px; justify-content: center; }
-        .links a { color: #4A9EFF; text-decoration: none; font-size: 0.9rem; }
-        .links a:hover { text-decoration: underline; }
+        .feature p { color: rgba(255,255,255,0.8); line-height: 1.5; white-space: normal; }
+
+        .footer { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255,255,255,0.06); }
+        .footer a { color: #4A9EFF; text-decoration: none; margin: 0 16px; font-size: 0.9rem; }
+        .footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="hero">
         <div class="icon">&#x1D453;</div>
         <h1>Maths Gauntlet</h1>
         <p class="subtitle">Master Mathematics through gamified practice</p>
+        <!-- Replace with App Store link once published -->
+        <span class="coming-soon">Coming soon to the App Store</span>
+    </div>
 
-        <div class="features">
-            <div class="feature">
-                <span class="feature-icon">&#x25B6;</span>
-                <p>Animated lessons with AI voiceover and step-by-step explanations</p>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">&#x1F9E0;</span>
-                <p>Adaptive practice that adjusts to your level using spaced repetition</p>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">&#x1F525;</span>
-                <p>Earn XP, level up, maintain daily streaks, and climb the leagues</p>
-            </div>
-            <div class="feature">
-                <span class="feature-icon">&#x1F4CA;</span>
-                <p>Track your progress across Number, Algebra, Geometry, Statistics, and more</p>
-            </div>
-        </div>
+    <div class="screenshots">
+        <img src="screenshots/home.png" alt="Home screen with streak and daily goal">
+        <img src="screenshots/topics.png" alt="Topic browser by domain">
+        <img src="screenshots/lesson.png" alt="Interactive lesson with animations">
+        <img src="screenshots/practice.png" alt="Adaptive practice session">
+        <img src="screenshots/progress.png" alt="Progress dashboard with charts">
+    </div>
 
-        <div class="links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="support.html">Support</a>
+    <div class="features">
+        <div class="feature">
+            <span class="feature-icon">&#x25B6;</span>
+            <p>Animated lessons with AI voiceover and step-by-step explanations</p>
         </div>
+        <div class="feature">
+            <span class="feature-icon">&#x1F9E0;</span>
+            <p>Adaptive practice that adjusts to your level using spaced repetition</p>
+        </div>
+        <div class="feature">
+            <span class="feature-icon">&#x1F525;</span>
+            <p>Earn XP, level up, maintain daily streaks, and climb the leagues</p>
+        </div>
+        <div class="feature">
+            <span class="feature-icon">&#x1F4CA;</span>
+            <p>Track your progress across Number, Algebra, Geometry, Statistics, and more</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
     </div>
 </body>
 </html>
